@@ -1,0 +1,36 @@
+{
+  "name": "kickoff",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp watch",
+    "clean": "gulp clean:soft",
+    "clean:hard": "gulp clean:hard"
+  },
+  "repository": "",
+  "author": "Julien van der Kluft",
+  "license": "ISC",
+  "bugs": "",
+  "devDependencies": {
+    "browser-sync": "^2.9.3",
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-csso": "^2.0.0",
+    "gulp-file-include": "^0.13.7",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-nunjucks-render": "^2.0.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.3.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.4.1",
+    "gulp-util": "^3.0.6",
+    "gulp-watch": "^4.3.5",
+    "jshint-stylish": "^2.0.1",
+    "minimist": "^1.2.0",
+    "require-dir": "^0.3.0"
+  }
+}
