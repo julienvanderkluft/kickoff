@@ -5,7 +5,7 @@ var gulp         = require('gulp')
     options      = require('minimist')(process.argv.slice(2))
     jshint       = require('gulp-jshint')
     browserify   = require('gulp-browserify')
-    uglify       = require('gulp-uglify')
+    uglify       = require('gulp-uglify');
 
 var set          = require('../settings').scripts;
 

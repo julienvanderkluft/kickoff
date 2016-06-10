@@ -3,7 +3,7 @@ var gulp         = require('gulp')
     plumber      = require('gulp-plumber')
     notify       = require('gulp-notify')
     options      = require('minimist')(process.argv.slice(2))
-    imagemin     = require('gulp-imagemin')
+    imagemin     = require('gulp-imagemin');
 
 var set          = require('../settings').medias;
 

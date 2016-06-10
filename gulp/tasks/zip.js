@@ -1,7 +1,4 @@
 var gulp         = require('gulp')
-    gutil        = require('gulp-util')
-    plumber      = require('gulp-plumber')
-    options      = require('minimist')(process.argv.slice(2))
     zip          = require('gulp-zip');
 
 var set          = require('../settings').zip;

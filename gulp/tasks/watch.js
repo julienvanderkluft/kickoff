@@ -1,9 +1,6 @@
 var gulp         = require('gulp')
-    gutil        = require('gulp-util')
-    plumber      = require('gulp-plumber')
-    options      = require('minimist')(process.argv.slice(2))
     browserSync  = require('browser-sync').create()
-    watch        = require('gulp-watch')
+    watch        = require('gulp-watch');
 
 var set          = require('../settings');
 

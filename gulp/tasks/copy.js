@@ -1,8 +1,4 @@
-var gulp    = require('gulp')
-    gutil   = require('gulp-util')
-    plumber = require('gulp-plumber')
-    notify  = require('gulp-notify')
-    options = require('minimist')(process.argv.slice(2));
+var gulp    = require('gulp');
 
 var set     = require('../settings').copy;
 
