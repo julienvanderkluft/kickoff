@@ -4,6 +4,11 @@
   # Paths variables
 -- */
 
+var project = {
+  name    : 'kickoff',
+  version : '0.0.1'
+};
+
 var app = {
   srcPath   : './src',
   buildPath : './build',
@@ -78,5 +83,9 @@ module.exports = {
     src  : assets.path + assets.mediasPath + '/**',
     dest : app.buildPath + assets.mediasPath + '/'
   },
+
+  zip: {
+    name : project.name + '-' + project.version
+  }
 
 }
