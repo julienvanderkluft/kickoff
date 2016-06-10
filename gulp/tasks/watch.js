@@ -18,7 +18,7 @@ var set          = require('../settings');
   - Admin External: http://192.168.1.100:3001
 -- */
 
-gulp.task('watch', ['copy', 'templates', 'styles', 'scripts', 'images', 'medias'], function() {
+gulp.task('watch', ['build'], function() {
   browserSync.init({
     server: set.browsersync.server,
     files: set.browsersync.files,

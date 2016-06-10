@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "gulp watch",
+    "build": "gulp build --build",
     "clean": "gulp clean:soft",
     "clean:hard": "gulp clean:hard"
   },
