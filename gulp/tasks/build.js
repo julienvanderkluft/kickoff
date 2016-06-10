@@ -3,8 +3,6 @@ var gulp         = require('gulp')
     plumber      = require('gulp-plumber')
     options      = require('minimist')(process.argv.slice(2))
 
-var set          = require('../settings');
-
 /* --
   gulp build task
 -- */
