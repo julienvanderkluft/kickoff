@@ -26,8 +26,16 @@ gulp.task('watch', ['build'], function() {
     notify: set.browsersync.notify
   });
 
-  watch([set.copy.rootfiles, set.copy.favicons, set.copy.fonts], function () {
-    gulp.start('copy');
+  watch(set.copy.rootfiles, function () {
+    gulp.start('root');
+  });
+
+  watch(set.copy.favicons, function () {
+    gulp.start('favicons');
+  });
+
+  watch(set.copy.fonts, function () {
+    gulp.start('fonts');
   });
 
   watch(set.templates.src, function () {
