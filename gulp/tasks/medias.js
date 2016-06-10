@@ -13,7 +13,7 @@ var set          = require('../settings').medias;
 
 gulp.task('medias', function() {
   return gulp.src(set.src)
-    .pipe(!options.build ? plumber({
+    .pipe(!options.prod ? plumber({
       errorHandler:
         notify.onError({
         title: 'Kickoff',

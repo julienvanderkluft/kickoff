@@ -16,7 +16,7 @@ var set          = require('../settings').styles;
 
 gulp.task('styles', function() {
   return gulp.src(set.src)
-    .pipe(!options.build ? plumber({
+    .pipe(!options.prod ? plumber({
       errorHandler:
         notify.onError({
         title: 'Kickoff',
@@ -26,11 +26,11 @@ gulp.task('styles', function() {
       })
     }) : gutil.noop())
 
-    .pipe(!options.build ? sourcemaps.init() : gutil.noop())
+    .pipe(!options.prod ? sourcemaps.init() : gutil.noop())
       .pipe(sass()) 
       .pipe(autoprefixer())
-    .pipe(!options.build ? sourcemaps.write('../maps') : gutil.noop())
-    .pipe(options.build ? csso() : gutil.noop())
+    .pipe(!options.prod ? sourcemaps.write('../maps') : gutil.noop())
+    .pipe(options.prod ? csso() : gutil.noop())
 
     .pipe(gulp.dest(set.dest))
     .pipe(browserSync.stream())

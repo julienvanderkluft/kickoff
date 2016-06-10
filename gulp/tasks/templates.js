@@ -13,7 +13,7 @@ var set      = require('../settings').templates;
 
 gulp.task('templates', function() {
   return gulp.src(set.src)
-    .pipe(!options.build ? plumber({
+    .pipe(!options.prod ? plumber({
       errorHandler:
         notify.onError({
         title: 'Kickoff',

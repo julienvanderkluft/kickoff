@@ -15,7 +15,7 @@ var set          = require('../settings').scripts;
 
 gulp.task('scripts', function() {
   return gulp.src(set.src)
-    .pipe(!options.build ? plumber({
+    .pipe(!options.prod ? plumber({
       errorHandler:
         notify.onError({
         title: 'Kickoff',
