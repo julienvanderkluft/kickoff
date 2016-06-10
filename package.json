@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "gulp build",
     "dev": "gulp watch",
     "prod": "gulp build --prod",
     "clean": "gulp clean:soft",
