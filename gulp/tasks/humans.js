@@ -4,7 +4,7 @@ var gulp   = require('gulp')
 var set    = require('../settings');
 
 /* --
-  copy files
+  Generate humans.txt
 -- */
 
 gulp.task('humans', function() {
