@@ -35,6 +35,11 @@ var project = {
   ]
 };
 
+var robots = {
+  useragent: '*',
+  disallow: ''
+};
+
 var app = {
   srcPath   : './src',
   buildPath : './build',
@@ -61,6 +66,7 @@ module.exports = {
   build : app.buildPath,
 
   project: {
+    distURL : 'http://localhost',
     name    : project.name,
     version : project.version,
     team    : project.team,
@@ -118,6 +124,11 @@ module.exports = {
   medias: {
     src  : assets.path + assets.mediasPath + '/**',
     dest : app.buildPath + assets.mediasPath + '/'
+  },
+
+  robots: {
+    useragent: robots.useragent,
+    disallow: robots.disallow
   },
 
   zip: {
