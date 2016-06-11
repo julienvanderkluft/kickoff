@@ -1,0 +1,18 @@
+{%
+  set site = {
+    title       : "Kickoff",
+    description : "Stay tuned !"
+  }
+%}
+
+{% extends "layouts/main.njk" %}
+
+  {% block content %}
+    {% include "partials/site-header.njk" %}
+
+    <main>
+      <h1>Kickoff</h1>
+    </main>
+
+    {% include "partials/site-footer.njk" %}
+  {% endblock %}
