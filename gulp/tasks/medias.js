@@ -1,11 +1,11 @@
-var gulp         = require('gulp')
-    gutil        = require('gulp-util')
-    plumber      = require('gulp-plumber')
-    notify       = require('gulp-notify')
-    options      = require('minimist')(process.argv.slice(2))
-    imagemin     = require('gulp-imagemin');
+var gulp     = require('gulp')
+    gutil    = require('gulp-util')
+    plumber  = require('gulp-plumber')
+    notify   = require('gulp-notify')
+    options  = require('minimist')(process.argv.slice(2))
+    imagemin = require('gulp-imagemin');
 
-var set          = require('../settings').medias;
+var set      = require('../settings').medias;
 
 /* --
   optimize medias pictures

@@ -1,7 +1,7 @@
-var gulp         = require('gulp')
-    zip          = require('gulp-zip');
+var gulp = require('gulp')
+    zip  = require('gulp-zip');
 
-var set          = require('../settings').zip;
+var set  = require('../settings').zip;
 
 /* --
   compress build folder to zip

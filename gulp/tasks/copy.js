@@ -1,6 +1,6 @@
-var gulp    = require('gulp');
+var gulp = require('gulp');
 
-var set     = require('../settings').copy;
+var set  = require('../settings').copy;
 
 /* --
   copy files

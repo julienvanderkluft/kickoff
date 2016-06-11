@@ -1,7 +1,7 @@
-var gulp         = require('gulp')
-    del          = require('del');
+var gulp = require('gulp')
+    del  = require('del');
 
-var set          = require('../settings');
+var set  = require('../settings');
 
 /* --
   gulp clean tasks
