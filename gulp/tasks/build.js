@@ -9,7 +9,7 @@ gulp.task('build', function(cb) {
   sequence(
     'clean:soft',
     ['copy', 'templates', 'styles', 'scripts', 'images', 'medias'],
-    ['humans', 'robots'],
+    ['humans', 'robots', 'sitemap'],
     cb
   );
 });

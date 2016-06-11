@@ -6,6 +6,7 @@
 -- */
 
 var project = {
+  url     : 'http://localhost',
   name    : 'kickoff',
   version : '0.0.1',
   team    : [
@@ -40,6 +41,10 @@ var robots = {
   disallow: ''
 };
 
+var sitemap = {
+  changefreq: 'monthly',
+};
+
 var app = {
   srcPath   : './src',
   buildPath : './build',
@@ -66,7 +71,7 @@ module.exports = {
   build : app.buildPath,
 
   project: {
-    distURL : 'http://localhost',
+    distURL : project.url,
     name    : project.name,
     version : project.version,
     team    : project.team,
@@ -129,6 +134,10 @@ module.exports = {
   robots: {
     useragent: robots.useragent,
     disallow: robots.disallow
+  },
+
+  sitemap: {
+    changefreq: sitemap.changefreq
   },
 
   zip: {
