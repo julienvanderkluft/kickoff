@@ -8,17 +8,26 @@ var set  = require('../settings');
   utility tasks for clean builded files, folders, and modules
 -- */
 
-// clean prod
+// remove prod output folder
 gulp.task('clean:soft', function () {
   return del([
     set.build,
+    set.zip.name + '.zip'
   ]);
 });
 
-// clean prod and installed node modules
+// remove zip
+gulp.task('clean:zip', function () {
+  return del([
+    set.zip.name + '.zip'
+  ]);
+});
+
+// remove prod output folder and installed node modules
 gulp.task('clean:hard', function () {
   return del([
     set.build,
+    set.zip.name + '.zip',
     './node_modules'
   ]);
 });

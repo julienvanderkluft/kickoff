@@ -8,6 +8,7 @@
     "dev": "gulp watch",
     "prod": "gulp build --prod && gulp zip",
     "clean": "gulp clean:soft",
+    "clean:zip": "gulp clean:zip",
     "clean:hard": "gulp clean:hard"
   },
   "repository": "",
