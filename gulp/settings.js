@@ -57,9 +57,9 @@ module.exports = {
 
   templates: {
     path  : templatesPath,
-    src   : templatesPath + '/*.+(html|nunjucks)',
+    src   : templatesPath + '/*.+(html|nunjucks|nj|njk)',
     dest  : app.buildPath,
-    watch : templatesPath + '/**/*.+(html|nunjucks)'
+    watch : templatesPath + '/**/*.+(html|nunjucks|nj|njk)'
   },
 
   styles: {
