@@ -1,12 +1,38 @@
 /* --
   Gulp tasks settings
 
+  # Project informations
   # Paths variables
 -- */
 
 var project = {
   name    : 'kickoff',
-  version : '0.0.1'
+  version : '0.0.1',
+  team    : [
+    'Dev. HTML/CSS : Julien van der Kluft (@youknowmeasmob on Twitter), http://www.minuitsept.com',
+    // Add you and your teammates here !
+  ],
+  thanks  : [
+    'Kickoff (https://github.com/julienvanderkluft/kickoff)'
+  ],
+  site    : [
+    'Last update : ' + new Date(),
+    'Standards: HTML5, CSS3',
+    'Components: Kickoff, Gulp',
+    'Software: Sublime Text 3'
+  ],
+  note    : [
+    'Built with Kickoff by Julien van der Kluft.',
+    '   _     _',
+    '  (c).-.(c)',
+    '   / ._. \\',
+    ' __\\( Y )/__',
+    '(_.-/\'-\'\\-._)',
+    '   || O ||',
+    ' _.\' `-\' \'._',
+    '(.-./`-\'\\.-.)',
+    ' `-\'     `-\''
+  ]
 };
 
 var app = {
@@ -33,6 +59,15 @@ var assets = {
 module.exports = {
 
   build : app.buildPath,
+
+  project: {
+    name    : project.name,
+    version : project.version,
+    team    : project.team,
+    thanks  : project.thanks,
+    site    : project.site,
+    note    : project.note
+  },
 
   browsersync: {
     server : app.buildPath,
