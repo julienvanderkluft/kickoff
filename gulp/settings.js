@@ -71,13 +71,13 @@ module.exports = {
 
   browsersync: {
     server : app.buildPath,
-    files: [
+    files  : [
       app.buildPath + 'css/**',
       app.buildPath + assets.imagesPath +  '/**',
       app.buildPath + assets.mediasPath +  '/**',
     ],
-    open: false,
-    notify: false
+    open   : false,
+    notify : false
   },
 
   copy: {
