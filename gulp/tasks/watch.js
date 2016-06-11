@@ -35,7 +35,7 @@ gulp.task('watch', ['build'], function() {
     gulp.start('fonts');
   });
 
-  watch(set.templates.src, function () {
+  watch(set.templates.watch, function () {
     gulp.start('templates');
   });
 
