@@ -57,9 +57,6 @@ var app = {
   buildPath : './build',
 };
 
-var rootFilesPath =
-  app.srcPath + '/rootfiles';
-
 var templatesPath =
   app.srcPath + '/templates';
 
@@ -103,12 +100,11 @@ module.exports = {
   },
 
   copy: {
-    rootfiles   : [rootFilesPath + '/**', rootFilesPath + '/.*'],
+    htaccess     : app.srcPath + '/.htaccess',
+    htaccessDest : app.buildPath,
 
-    fontsFolder : '/fonts',
-    fonts       : assets.path + assets.fontsPath + '/*.+(eot|woff|woff2|ttf|svg)',
-
-    dest        : app.buildPath
+    fonts        : assets.path + assets.fontsPath + '/*.+(eot|woff|woff2|ttf|svg)',
+    fontsDest    : app.buildPath + '/fonts'
   },
 
   templates: {
