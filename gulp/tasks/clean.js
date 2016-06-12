@@ -12,6 +12,7 @@ var set  = require('../settings');
 gulp.task('clean:soft', function () {
   return del([
     set.build,
+    set.templates.path + '/partials/generated',
     set.zip.name + '.zip'
   ]);
 });
@@ -27,6 +28,7 @@ gulp.task('clean:zip', function () {
 gulp.task('clean:hard', function () {
   return del([
     set.build,
+    set.templates.path + '/partials/generated',
     set.zip.name + '.zip',
     './node_modules'
   ]);
