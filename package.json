@@ -42,5 +42,9 @@
     "minimist": "^1.2.0",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.2.1"
+  },
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "webfontloader": "^1.6.24"
   }
 }
