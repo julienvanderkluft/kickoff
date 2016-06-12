@@ -8,6 +8,7 @@ var gulp     = require('gulp')
 gulp.task('build', function(cb) {
   sequence(
     'clean:soft',
+    'favicons',
     ['copy', 'templates', 'styles', 'scripts', 'images', 'medias'],
     ['humans', 'robots', 'sitemap'],
     cb

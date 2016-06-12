@@ -1,6 +1,7 @@
 # App
 
 build/
+src/templates/partials/generated/
 
 
 # Created by https://www.gitignore.io/api/sass,gulp,node

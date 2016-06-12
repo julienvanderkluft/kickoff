@@ -12,12 +12,6 @@ gulp.task('root', function(){
     .pipe(gulp.dest(set.dest))
 });
 
-gulp.task('favicons', function(){
-  return gulp.src(set.favicons)
-
-    .pipe(gulp.dest(set.dest))
-});
-
 gulp.task('fonts', function(){
   return gulp.src(set.fonts)
 
@@ -26,4 +20,4 @@ gulp.task('fonts', function(){
 });
 
 
-gulp.task('copy', ['root', 'favicons', 'fonts']);
+gulp.task('copy', ['root', 'fonts']);

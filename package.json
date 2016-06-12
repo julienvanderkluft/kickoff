@@ -22,6 +22,7 @@
     "gulp-autoprefixer": "^3.1.0",
     "gulp-browserify": "^0.5.1",
     "gulp-csso": "^2.0.0",
+    "gulp-favicons": "^2.2.6",
     "gulp-file-include": "^0.13.7",
     "gulp-humans": "^2.0.2",
     "gulp-imagemin": "^2.4.0",

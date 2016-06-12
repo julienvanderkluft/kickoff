@@ -7,8 +7,9 @@
 
 var project = {
   url     : 'http://localhost',
-  name    : 'kickoff',
+  name    : 'Kickoff',
   version : '0.0.1',
+  desc    : 'Launch the game faster !',
   team    : [
     'Dev. HTML/CSS : Julien van der Kluft (@youknowmeasmob on Twitter), http://www.minuitsept.com',
     // Add you and your teammates here !
@@ -57,13 +58,17 @@ var templatesPath =
   app.srcPath + '/templates';
 
 var assets = {
-  path          : app.srcPath + '/assets',
-  stylesPath    : '/scss',
-  scriptsPath   : '/js',
-  faviconsPath  : '/favicons',
-  imagesPath    : '/images',
-  fontsPath     : '/fonts',
+  path         : app.srcPath + '/assets',
+  stylesPath   : '/scss',
+  scriptsPath  : '/js',
+  imagesPath   : '/images',
+  fontsPath    : '/fonts',
 };
+
+var favicons = {
+  path : '/favicons',
+  background : '#fff'
+}
 
 
 module.exports = {
@@ -93,7 +98,6 @@ module.exports = {
 
   copy: {
     rootfiles   : [rootFilesPath + '/**', rootFilesPath + '/.*'],
-    favicons    : assets.path + assets.faviconsPath + '/**',
 
     fontsFolder : '/fonts',
     fonts       : assets.path + assets.fontsPath + '/*.+(eot|woff|woff2|ttf|svg)',
@@ -129,6 +133,11 @@ module.exports = {
   medias: {
     src  : assets.path + assets.mediasPath + '/**',
     dest : app.buildPath + assets.mediasPath + '/'
+  },
+
+  favicons: {
+    src        : assets.path + favicons.Path + '/favicon.png',
+    background : favicons.background
   },
 
   robots: {
