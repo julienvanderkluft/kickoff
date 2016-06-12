@@ -2,6 +2,7 @@
   Gulp tasks settings
 
   # Project informations
+  # Robots, sitemap and favicons configuration
   # Paths variables
 -- */
 
@@ -46,6 +47,11 @@ var sitemap = {
   changefreq: 'monthly',
 };
 
+var favicons = {
+  path : '/favicons',
+  background : '#fff'
+}
+
 var app = {
   srcPath   : './src',
   buildPath : './build',
@@ -65,11 +71,11 @@ var assets = {
   fontsPath    : '/fonts',
 };
 
-var favicons = {
-  path : '/favicons',
-  background : '#fff'
-}
 
+/*
+  Modify part after this line,
+  only if you know what you do
+*/
 
 module.exports = {
 
