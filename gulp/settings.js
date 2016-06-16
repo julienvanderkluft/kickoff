@@ -138,7 +138,7 @@ module.exports = {
   },
 
   favicons: {
-    src        : assets.path + favicons.Path + '/favicon.png',
+    src        : assets.path + favicons.path + '/favicon.png',
     background : favicons.background
   },
 
