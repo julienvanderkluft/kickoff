@@ -11,7 +11,6 @@ var set      = require('../settings');
   Generate favicons
 -- */
 
-console.log(set.favicons.src);
 gulp.task('favicons', function() {
   return gulp.src(set.favicons.src)
     .pipe(!options.prod ? plumber({
