@@ -12,7 +12,7 @@ var project = {
   version : '0.0.1',
   desc    : 'Launch the game faster !',
   team    : [
-    'Dev. HTML/CSS : Julien van der Kluft (@youknowmeasmob on Twitter), http://www.minuitsept.com',
+    'Dev. HTML/CSS : Julien van der Kluft (@jvanderkluft on Twitter), http://www.minuitsept.com',
     // Add you and your teammates here !
   ],
   thanks  : [
