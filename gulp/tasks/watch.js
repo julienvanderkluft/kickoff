@@ -23,16 +23,16 @@ gulp.task('watch', ['build'], function() {
     notify: set.browsersync.notify
   });
 
-  watch(set.copy.rootfiles, function () {
-    gulp.start('root');
-  });
-
-  watch(set.copy.favicons, function () {
-    gulp.start('favicons');
+  watch(set.copy.htaccess, function () {
+    gulp.start('htaccess');
   });
 
   watch(set.copy.fonts, function () {
     gulp.start('fonts');
+  });
+
+  watch(set.favicons.src, function () {
+    gulp.start('favicons');
   });
 
   watch(set.templates.watch, function () {
