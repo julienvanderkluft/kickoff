@@ -152,6 +152,7 @@ module.exports = {
   },
 
   zip: {
+    src  : app.buildPath + '/**',
     name : project.name + '-' + project.version
   }
 
