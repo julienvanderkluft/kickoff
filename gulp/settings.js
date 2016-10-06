@@ -60,6 +60,9 @@ var app = {
 var templatesPath =
   app.srcPath + '/templates';
 
+var mediasPath =
+  '/medias';
+
 var assets = {
   path         : app.srcPath + '/assets',
   stylesPath   : '/scss',
@@ -93,7 +96,7 @@ module.exports = {
     files  : [
       app.buildPath + 'css/**',
       app.buildPath + assets.imagesPath +  '/**',
-      app.buildPath + assets.mediasPath +  '/**',
+      app.buildPath + mediasPath +  '/**',
     ],
     open   : false,
     notify : false
@@ -133,8 +136,8 @@ module.exports = {
   },
 
   medias: {
-    src  : assets.path + assets.mediasPath + '/**',
-    dest : app.buildPath + assets.mediasPath + '/'
+    src  : assets.path + mediasPath + '/**',
+    dest : app.buildPath + mediasPath + '/'
   },
 
   favicons: {
