@@ -33,5 +33,4 @@ gulp.task('styles', function() {
     .pipe(options.prod ? csso() : gutil.noop())
 
     .pipe(gulp.dest(set.dest))
-    .pipe(browserSync.stream())
 });

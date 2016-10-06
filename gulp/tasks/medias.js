@@ -23,8 +23,7 @@ gulp.task('medias', function() {
       })
     }) : gutil.noop())
 
-    .pipe(imagemin())
+    .pipe(options.prod ? imagemin() : gutil.noop())
 
     .pipe(gulp.dest(set.dest))
-    .pipe(browserSync.stream())
 });

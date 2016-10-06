@@ -3,6 +3,7 @@ var gulp     = require('gulp')
     plumber  = require('gulp-plumber')
     notify   = require('gulp-notify')
     options  = require('minimist')(process.argv.slice(2))
+    browserSync  = require('browser-sync')
     favicons = require('gulp-favicons');
 
 var set      = require('../settings');
@@ -40,5 +41,7 @@ gulp.task('favicons', function() {
       pipeHTML: false,
       replace: true
     }))
-    .pipe(gulp.dest(set.build));
+
+    .pipe(gulp.dest(set.build))
+    .pipe(browserSync.reload({stream: true, once: true}))
 });

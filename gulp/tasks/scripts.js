@@ -1,13 +1,14 @@
-var gulp       = require('gulp')
-    gutil      = require('gulp-util')
-    plumber    = require('gulp-plumber')
-    notify     = require('gulp-notify')
-    options    = require('minimist')(process.argv.slice(2))
-    jshint     = require('gulp-jshint')
-    browserify = require('gulp-browserify')
-    uglify     = require('gulp-uglify');
+var gulp         = require('gulp')
+    gutil        = require('gulp-util')
+    plumber      = require('gulp-plumber')
+    notify       = require('gulp-notify')
+    options      = require('minimist')(process.argv.slice(2))
+    browserSync  = require('browser-sync')
+    jshint       = require('gulp-jshint')
+    browserify   = require('gulp-browserify')
+    uglify       = require('gulp-uglify');
 
-var set        = require('../settings').scripts;
+var set          = require('../settings').scripts;
 
 /* --
   build javascripts output file
@@ -36,5 +37,5 @@ gulp.task('scripts', function() {
     .pipe(options.prod ? uglify() : gutil.noop())
 
     .pipe(gulp.dest(set.dest))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.reload({stream: true, once: true}))
 });

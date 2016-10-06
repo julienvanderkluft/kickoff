@@ -106,7 +106,7 @@ module.exports = {
       app.buildPath + mediasPath +  '/**',
     ],
     open   : false,
-    notify : false
+    notify : true
   },
 
   copy: {
@@ -144,7 +144,7 @@ module.exports = {
   },
 
   medias: {
-    src  : assets.path + mediasPath + '/**',
+    src  : app.srcPath + mediasPath + '/**',
     dest : app.buildPath + mediasPath + '/'
   },
 

@@ -1,11 +1,12 @@
-var gulp     = require('gulp')
-    gutil    = require('gulp-util')
-    plumber  = require('gulp-plumber')
-    notify   = require('gulp-notify')
-    options  = require('minimist')(process.argv.slice(2))
-    nunjucks = require('gulp-nunjucks-render');
+var gulp         = require('gulp')
+    gutil        = require('gulp-util')
+    plumber      = require('gulp-plumber')
+    notify       = require('gulp-notify')
+    options      = require('minimist')(process.argv.slice(2))
+    browserSync  = require('browser-sync')
+    nunjucks     = require('gulp-nunjucks-render');
 
-var set      = require('../settings').templates;
+var set          = require('../settings').templates;
 
 /* --
   build html output pages
@@ -28,5 +29,5 @@ gulp.task('templates', function() {
     }))
 
     .pipe(gulp.dest(set.dest))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.reload({stream: true, once: true}))
 });
