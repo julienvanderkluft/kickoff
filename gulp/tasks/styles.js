@@ -27,7 +27,7 @@ gulp.task('styles', function() {
     }) : gutil.noop())
 
     .pipe(!options.prod ? sourcemaps.init() : gutil.noop())
-      .pipe(sass()) 
+      .pipe(sass({ includePaths: set.includePaths })) 
       .pipe(autoprefixer())
     .pipe(!options.prod ? sourcemaps.write('../maps') : gutil.noop())
     .pipe(options.prod ? csso() : gutil.noop())

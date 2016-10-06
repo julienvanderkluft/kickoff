@@ -71,6 +71,13 @@ var assets = {
   fontsPath    : '/fonts',
 };
 
+var modulesAssets = {
+  styles :
+    [
+      './node_modules/normalize.css/',
+    ],
+}
+
 
 /*
   Modify part after this line,
@@ -119,6 +126,7 @@ module.exports = {
 
   styles: {
     src   : assets.path + assets.stylesPath + '/main.scss',
+    includePaths : modulesAssets.styles,
     dest  : app.buildPath + '/css/',
     watch : assets.path + assets.stylesPath + '/**'
   },
