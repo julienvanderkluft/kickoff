@@ -3,14 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "build": "gulp build",
-    "dev": "gulp watch",
-    "prod": "gulp build --prod && gulp zip",
-    "clean": "gulp clean:soft",
-    "clean:zip": "gulp clean:zip",
-    "clean:hard": "gulp clean:hard"
-  },
+  "scripts": {},
   "repository": "",
   "author": "Julien van der Kluft",
   "license": "ISC",
