@@ -1,0 +1,36 @@
+// --
+// Common content type style
+// --
+
+
+// `<html/>` and `<body/>`
+// --
+html {
+  font-size: $fs-root;
+}
+
+  body {
+    font-family: $ff-primary;
+    font-weight: $fw-primary-regular;
+    font-size: $fs-base;
+    line-height: $lh;
+    color: $txt-clr;
+  }
+
+
+// Text selection colors
+// --
+::selection {
+  background: darken($clr-secondary, 20%);
+  text-shadow: none;
+}
+
+
+// Common text elements
+// --
+
+//
+// Define default margins on paragraphs
+p {
+  margin-bottom: $space;
+}

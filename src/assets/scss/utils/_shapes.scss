@@ -1,0 +1,41 @@
+//
+// Creates a CSS triangle, which can be used for dropdown arrows,
+// dropdown pips, and more.
+// Use this mixin inside a `&::before` or `&::after` selector,
+// to attach the triangle to an existing element.
+//
+// @param {Number}  $triangle-size      Width of the triangle.
+// @param {Color}   $triangle-color     Color of the triangle.
+// @param {Keyword} $triangle-direction Direction the triangle points. Can be `up`, `right`, `down`, or `left`.
+@mixin css-triangle(
+  $triangle-size,
+  $triangle-color,
+  $triangle-direction
+) {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border: inset $triangle-size;
+
+  @if ($triangle-direction == down) {
+    border-color: $triangle-color transparent transparent;
+    border-top-style: solid;
+    border-bottom-width: 0;
+  }
+  @if ($triangle-direction == up) {
+    border-color: transparent transparent $triangle-color;
+    border-bottom-style: solid;
+    border-top-width: 0;
+  }
+  @if ($triangle-direction == right) {
+    border-color: transparent transparent transparent $triangle-color;
+    border-left-style: solid;
+    border-right-width: 0;
+  }
+  @if ($triangle-direction == left) {
+    border-color: transparent $triangle-color transparent transparent;
+    border-right-style: solid;
+    border-left-width: 0;
+  }
+}

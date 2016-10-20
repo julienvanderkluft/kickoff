@@ -1,0 +1,7 @@
+//
+// Help to quicly use hover or active states in CSS rules.
+// Write #{link-hover/active} {} as a shortcut in your rule.
+
+$link        : '&, &:active, &:hover, &:visited, &:focus';
+$link-hover  : '&:active, &:hover, &:focus';
+$link-active : '&--active, &--current';

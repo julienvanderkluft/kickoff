@@ -1,0 +1,12 @@
+//
+// Applies the micro clearfix hack.
+// Include this mixin on a container if its children are all floated,
+// to give the container a proper height.
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

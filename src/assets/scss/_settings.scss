@@ -1,0 +1,103 @@
+// --
+// =Colors
+// --
+
+$clr-primary   : #000;
+$clr-secondary : #fff;
+
+
+// --
+// =Spacing
+// --
+
+$space-inset-base : rem(16px) rem(16px) rem(16px) rem(16px);
+$space-inset-xs   : rem(4px) rem(4px) rem(4px) rem(4px);
+$space-inset-s    : rem(8px) rem(8px) rem(8px) rem(8px);
+$space-inset-m    : rem(16px) rem(16px) rem(16px) rem(16px);
+$space-inset-l    : rem(32px) rem(32px) rem(32px) rem(32px);
+$space-inset-xl   : rem(64px) rem(64px) rem(64px) rem(64px);
+$space-inset      : $space-inset-base;
+
+$space-stack-base : 0 0 rem(16px) 0;
+$space-stack-xs   : 0 0 rem(4px) 0;
+$space-stack-s    : 0 0 rem(8px) 0;
+$space-stack-m    : 0 0 rem(16px) 0;
+$space-stack-l    : 0 0 rem(32px) 0;
+$space-stack-xl   : 0 0 rem(64px) 0;
+$space-stack      : $space-stack-base;
+
+$space-base       : rem(16px);
+$space-xs         : rem(4px);
+$space-s          : rem(8px);
+$space-m          : rem(16px);
+$space-l          : rem(32px);
+$space-xl         : rem(64px);
+$space            : $space-base;
+
+
+// --
+// =Scaffolding
+// --
+
+// Body
+// --
+$body-bkg              : $clr-secondary;
+$txt-clr               : $clr-primary;
+
+// Links
+// --
+$link-clr              : lighten($txt-clr, 10%);
+$link-decoration       : underline;
+$link-hover-clr        : lighten($link-clr, 20%);
+$link-hover-decoration : underline;
+
+
+// --
+// =Typography
+// --
+
+// Fonts
+// --
+$ff-primary : "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// Font sizes
+// --
+
+//
+// Root font size is defined into main.scss
+
+$fs-base : rem(16px);
+
+$fs-h1   : rem(32px);
+$fs-h2   : rem(24px);
+$fs-h3   : rem(18px);
+$fs-h4   : rem(16px);
+$fs-h5   : rem(13px);
+$fs-h6   : rem(10px);
+
+// Font weights
+// --
+$fw-primary-regular: normal;
+
+
+// Line-height
+// --
+$lh         : 1.5;
+
+// Headings
+// --
+$headings-mb  : $space;
+$headings-ff  : inherit;
+$headings-fw  : 700;
+$headings-lh  : 1.1;
+$headings-clr : inherit;
+
+
+// --
+// =Animations
+// --
+
+// Transition properties
+// --
+$transition-duration : 250ms;
+$transition-easing   : ease;

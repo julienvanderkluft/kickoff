@@ -1,0 +1,11 @@
+//
+// A shortcut to transition property
+// Use empty mixin values for a default transition application
+
+@mixin transition($transition: null) {
+    @if ($transition != null) {
+      transition: $transition;
+    } @else {
+      transition: all $transition-duration $transition-easing;
+    }
+}

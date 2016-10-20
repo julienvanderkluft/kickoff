@@ -1,0 +1,14 @@
+// --
+// Links
+// --
+
+a {
+  color: $link-clr;
+  text-decoration: $link-decoration;
+  transition: color $transition-duration $transition-easing;
+
+  #{link-hover} {
+    color: $link-hover-clr;
+    text-decoration: $link-hover-decoration;
+  }
+}
