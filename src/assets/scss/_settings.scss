@@ -64,9 +64,9 @@ $txt-clr               : $clr-primary;
 
 // Links
 // --
-$link-clr              : lighten($txt-clr, 10%);
+$link-clr              : lighten($txt-clr, 50%);
 $link-decoration       : underline;
-$link-hover-clr        : lighten($link-clr, 20%);
+$link-hover-clr        : lighten($link-clr, 25%);
 $link-hover-decoration : underline;
 
 

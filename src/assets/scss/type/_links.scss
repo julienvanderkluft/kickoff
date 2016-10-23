@@ -7,7 +7,7 @@ a {
   text-decoration: $link-decoration;
   transition: color $transition-duration $transition-easing;
 
-  #{link-hover} {
+  #{$link-hover} {
     color: $link-hover-clr;
     text-decoration: $link-hover-decoration;
   }
