@@ -1,0 +1,44 @@
+//
+// TODO: Write detailled comments
+
+@mixin gridle_breakpoints($breakpoints-map) {
+  @each $label, $value in $breakpoints-map {
+    @if($value != null AND $value != 0) {
+      @include gridle_register_state($label, (
+        min-width : $value
+      ));
+    }
+    @else {
+      $value: map-get-next($breakpoints-map, $label);
+
+      @include gridle_register_state($label, (
+        max-width : $value
+      ));
+    }
+  }
+}
+
+
+.container {
+    max-width : ($container-max-width - $gr-gutter-width);
+    margin : 0 auto;
+    padding-left: ($gr-gutter-width / 2);
+    padding-right: ($gr-gutter-width / 2);
+}
+
+
+// Import gridle
+@import 'gridle-flex';
+
+// Setup gridle
+@include gridle_setup((
+    context        : $gr-columns,
+    gutter-width   : $gr-gutter-width,
+    direction      : $gr-direction,
+));
+
+// Build breakpoints
+@include gridle_breakpoints($gr-breakpoints);
+
+// Generate classes
+@include gridle_generate_classes();

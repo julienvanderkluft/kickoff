@@ -37,6 +37,7 @@
     "run-sequence": "^1.2.1"
   },
   "dependencies": {
+    "gridle": "^2.0.48",
     "jquery": "^3.0.0",
     "normalize.css": "^5.0.0",
     "webfontloader": "^1.6.24"

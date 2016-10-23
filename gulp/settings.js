@@ -75,6 +75,7 @@ var modulesAssets = {
   styles :
     [
       './node_modules/normalize.css/',
+      './node_modules/gridle/sass/gridle',
     ],
 }
 
