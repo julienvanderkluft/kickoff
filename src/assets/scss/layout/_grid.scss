@@ -1,6 +1,5 @@
 //
 // TODO: Write detailled comments
-
 @mixin gridle_breakpoints($breakpoints-map) {
   @each $label, $value in $breakpoints-map {
     @if($value != null AND $value != 0) {
@@ -18,7 +17,7 @@
   }
 }
 
-
+// Manage main container size
 .container {
     max-width : ($container-max-width - $gr-gutter-width);
     margin : 0 auto;
