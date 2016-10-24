@@ -6,7 +6,7 @@
 }
 
 // Import sass-mq
-@import "mq";
+@import "sass-mq/mq";
 
 // Update label display of breakpoint
 body::before {
