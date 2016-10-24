@@ -1,5 +1,11 @@
 //
-$fs-root : 16px;
+
+
+// --
+// =Settings
+// --
+
+@import "settings";
 
 // --
 // =Reset
@@ -16,24 +22,16 @@ $fs-root : 16px;
 @import "utils/center";
 @import "utils/clearfix";
 @import "utils/links-states";
-@import "utils/map-get-next";
 @import "utils/shapes";
 @import "utils/transition";
-@import "utils/units";
-
-
-// --
-// =Settings
-// --
-
-@import "settings";
-
 
 // --
 // =Tools
 // --
 
+@import "tools/map-get-next";
 @import "tools/mediaqueries";
+@import "tools/units";
 
 
 // --

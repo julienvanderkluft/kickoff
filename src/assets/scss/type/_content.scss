@@ -12,7 +12,7 @@ html {
   body {
     font-family: $ff-primary;
     font-weight: $fw-primary-regular;
-    font-size: $fs-base;
+    font-size: rem($fs-base);
     line-height: $lh;
     color: $txt-clr;
   }
@@ -32,5 +32,5 @@ html {
 //
 // Define default margins on paragraphs
 p {
-  margin-bottom: $space;
+  margin-bottom: rem($space);
 }

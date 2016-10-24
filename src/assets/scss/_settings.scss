@@ -40,28 +40,28 @@ $gr-direction        : ltr;
 // =Spacing
 // --
 
-$space-inset-base : rem(16px) rem(16px) rem(16px) rem(16px);
-$space-inset-xs   : rem(4px) rem(4px) rem(4px) rem(4px);
-$space-inset-s    : rem(8px) rem(8px) rem(8px) rem(8px);
-$space-inset-m    : rem(16px) rem(16px) rem(16px) rem(16px);
-$space-inset-l    : rem(32px) rem(32px) rem(32px) rem(32px);
-$space-inset-xl   : rem(64px) rem(64px) rem(64px) rem(64px);
+$space-inset-base : 16px 16px 16px 16px;
+$space-inset-xs   : 4px 4px 4px 4px;
+$space-inset-s    : 8px 8px 8px 8px;
+$space-inset-m    : 16px 16px 16px 16px;
+$space-inset-l    : 32px 32px 32px 32px;
+$space-inset-xl   : 64px 64px 64px 64px;
 $space-inset      : $space-inset-base;
 
-$space-stack-base : 0 0 rem(16px) 0;
-$space-stack-xs   : 0 0 rem(4px) 0;
-$space-stack-s    : 0 0 rem(8px) 0;
-$space-stack-m    : 0 0 rem(16px) 0;
-$space-stack-l    : 0 0 rem(32px) 0;
-$space-stack-xl   : 0 0 rem(64px) 0;
+$space-stack-base : 0 0 16px 0;
+$space-stack-xs   : 0 0 4px 0;
+$space-stack-s    : 0 0 8px 0;
+$space-stack-m    : 0 0 16px 0;
+$space-stack-l    : 0 0 32px 0;
+$space-stack-xl   : 0 0 64px 0;
 $space-stack      : $space-stack-base;
 
-$space-base       : rem(16px);
-$space-xs         : rem(4px);
-$space-s          : rem(8px);
-$space-m          : rem(16px);
-$space-l          : rem(32px);
-$space-xl         : rem(64px);
+$space-base       : 16px;
+$space-xs         : 4px;
+$space-s          : 8px;
+$space-m          : 16px;
+$space-l          : 32px;
+$space-xl         : 64px;
 $space            : $space-base;
 
 
@@ -94,16 +94,17 @@ $ff-primary : "Helvetica Neue", Helvetica, Arial, sans-serif;
 // --
 
 //
-// Root font size is defined into main.scss
+// Pixel value used to responsively scale all typography. Applied to the `<html>` element.
+$fs-root : 16px;
 
-$fs-base : rem(16px);
+$fs-base : 16px;
 
-$fs-h1   : rem(32px);
-$fs-h2   : rem(24px);
-$fs-h3   : rem(18px);
-$fs-h4   : rem(16px);
-$fs-h5   : rem(13px);
-$fs-h6   : rem(10px);
+$fs-h1   : 32px;
+$fs-h2   : 24px;
+$fs-h3   : 18px;
+$fs-h4   : 16px;
+$fs-h5   : 13px;
+$fs-h6   : 10px;
 
 // Font weights
 // --
