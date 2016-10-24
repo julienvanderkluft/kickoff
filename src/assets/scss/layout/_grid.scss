@@ -37,7 +37,7 @@
 ));
 
 // Build breakpoints
-@include gridle_breakpoints($gr-breakpoints);
+@include gridle_breakpoints($mq-breakpoints);
 
 // Generate classes
 @include gridle_generate_classes();

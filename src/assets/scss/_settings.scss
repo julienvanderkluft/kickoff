@@ -7,6 +7,25 @@ $clr-secondary : #fff;
 
 
 // --
+// =Media Queries
+// --
+
+$mq-breakpoints: (
+  'xs': 0px,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px
+);
+
+//
+// If you want to display the currently active breakpoint in the top
+// right corner of your site during development.
+// `true` or `false` are accepted
+$show-breakpoints: true;
+
+
+// --
 // =Grid
 // --
 
@@ -15,14 +34,6 @@ $container-max-width : 1280px;
 $gr-columns          : 12;
 $gr-gutter-width     : 30px;
 $gr-direction        : ltr;
-
-$gr-breakpoints: (
-  'xs': 0,
-  'sm': 576px,
-  'md': 768px,
-  'lg': 992px,
-  'xl': 1200px
-);
 
 
 // --
