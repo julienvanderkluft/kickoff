@@ -101,7 +101,6 @@ module.exports = {
   browsersync: {
     server : app.buildPath,
     files  : [
-      app.buildPath + 'css/**',
       app.buildPath + assets.imagesPath +  '/**',
       app.buildPath + mediasPath +  '/**',
     ],

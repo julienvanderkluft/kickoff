@@ -3,6 +3,7 @@ var gulp         = require('gulp')
     plumber      = require('gulp-plumber')
     notify       = require('gulp-notify')
     options      = require('minimist')(process.argv.slice(2))
+    browserSync  = require('browser-sync')
     sass         = require('gulp-sass')
     autoprefixer = require('gulp-autoprefixer')
     sourcemaps   = require('gulp-sourcemaps')
@@ -33,4 +34,5 @@ gulp.task('styles', function() {
     .pipe(options.prod ? csso() : gutil.noop())
 
     .pipe(gulp.dest(set.dest))
+    .pipe(browserSync.stream())
 });

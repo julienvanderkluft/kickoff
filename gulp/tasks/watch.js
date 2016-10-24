@@ -1,5 +1,5 @@
 var gulp         = require('gulp')
-    browserSync  = require('browser-sync')
+    browserSync  = require('browser-sync').create()
     watch        = require('gulp-watch');
 
 var set          = require('../settings');
@@ -16,7 +16,6 @@ var set          = require('../settings');
 -- */
 
 gulp.task('watch', ['build'], function() {
-  var serv = browserSync.create();
   browserSync.init({
     server: set.browsersync.server,
     files: set.browsersync.files,

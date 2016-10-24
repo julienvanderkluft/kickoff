@@ -26,5 +26,4 @@ gulp.task('images', function() {
     .pipe(imagemin())
 
     .pipe(gulp.dest(set.dest))
-    .pipe(browserSync.stream())
 });
