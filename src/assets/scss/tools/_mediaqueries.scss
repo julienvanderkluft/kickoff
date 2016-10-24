@@ -1,9 +1,7 @@
 //
-// Display the currently active breakpoint in the top left corner
+// Datas to display the currently active breakpoint in the top left corner
 // of your project during development.
-@if($show-breakpoints) {
-  $mq-show-breakpoints: (map-keys($mq-breakpoints));
-}
+$mq-show-breakpoints: (map-keys($mq-breakpoints));
 
 // Import sass-mq
 @import "sass-mq/mq";
@@ -13,4 +11,9 @@ body::before {
   right: auto; left: 0;
   border-left: 0;
   border-right: 1px solid #fbeed5;
+
+  // Hide the currently active breakpoint if `$show-breakpoints` is `false
+  @if($show-breakpoints == false) {
+    content: none !important;
+  }
 }
