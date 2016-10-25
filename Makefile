@@ -6,21 +6,27 @@ help:
 install: ## Install or update Node dependencies
 	@echo "Installing Node dependencies..."
 	@npm install
+	@echo "Done."
 
 build: ## Basic build project.
 	@gulp build
+	@echo "Take a look in your new build folder !"
 
 dev: ## Basic build project and live watching of files modifications.
-	@echo "Use 'crtl + c' for stop."
+	@echo "Starting..."
+	@echo "Use 'crtl + c' for stop when watcher is launched."
 	@gulp watch
 
 prod: ## Build for production, with optimized content. And create a zipfile of it.
 	@gulp build --prod && gulp zip
+	@echo "Done."
 
 clean: ## Clean build folder and temporary files.
 	@echo "Clean build folder and temporary files..."
 	@gulp clean:soft
+	@echo "Done."
 
 clean-hard: ## Clean build folder and installed dependencies.
 	@echo "Clean build folder and installed dependencies..."
 	@gulp clean:hard
+	@echo "Done."
