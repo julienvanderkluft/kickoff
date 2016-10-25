@@ -6,14 +6,9 @@ src/templates/partials/generated/
 
 # Created by https://www.gitignore.io/api/sass,node
 
-### Yarn ###
-yarn.lock
-
-
 ### Sass ###
 .sass-cache/
 *.css.map
-
 
 ### Node ###
 # Logs
