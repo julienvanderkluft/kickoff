@@ -7,11 +7,81 @@
   @return $num / ($num * 0 + 1);
 }
 
+@function em($values, $base: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1em;
+}
+
+//
+// Converts one or more pixel values into matching em values.
+//
+// @param {Number|List} $values - One or more values to convert. Be sure to separate them with spaces and not commas. If you need to convert a comma-separated list, wrap the list in parentheses.
+// @param {Number} $base [null] - The base value to use when calculating the `em`. If this parameter is `null`, the function will reference the `$fs-root` variable as the base.
+//
+// @returns {List} A list of converted values.
+@function em($values, $base: null) {
+  $em-values: ();
+  $count: length($values);
+
+  // If no base is defined, defer to the global font size
+  @if $base == null {
+    $base: $fs-root;
+  }
+
+  @if $count == 1 {
+    @return em-calc($values, $base);
+  }
+
+  @for $i from 1 through $count {
+    $em-values: append($em-values, em-calc(nth($values, $i), $base));
+  }
+
+  @return $em-values;
+}
+
+//
+// Converts a pixel value to matching em value. *Any* value passed,
+// regardless of unit, is assumed to be a pixel value. By default,
+// the base pixel value used to calculate the em value is taken from
+// the `$fs-root` variable.
+//
+// @param {Number} $value - Pixel value to convert.
+// @param {Number} $base [null] - Base for pixel conversion.
+// @returns {Number} A number in ems, calculated based on the given value and
+// the base pixel value. em values are passed through as is.
+@function em-calc($value, $base: null) {
+  // Check if the value is a number
+  @if type-of($value) != 'number' {
+    @warn inspect($value) + ' was passed to em(), which is not a number.';
+    @return $value;
+  }
+
+  // Calculate em if units for $value is not em
+  @if unit($value) != 'em' {
+    $value: strip-unit($value) / strip-unit($base) * 1em;
+  }
+
+  // Turn 0em into 0
+  @if $value == 0em {
+    $value: 0;
+  }
+
+  @return $value;
+}
+
+
 //
 // Converts one or more pixel values into matching rem values.
 //
 // @param {Number|List} $values - One or more values to convert. Be sure to separate them with spaces and not commas. If you need to convert a comma-separated list, wrap the list in parentheses.
-// @param {Number} $base [null] - The base value to use when calculating the `rem`. If you're using Foundation out of the box, this is 16px. If this parameter is `null`, the function will reference the `$base-font-size` variable as the base.
+// @param {Number} $base [null] - The base value to use when calculating the `rem`. If this parameter is `null`, the function will reference the `$fs-root` variable as the base.
 //
 // @returns {List} A list of converted values.
 @function rem($values, $base: null) {
