@@ -19,7 +19,7 @@
 
 // Manage main container size
 .container {
-    max-width : ($container-max-width - $gr-gutter-width);
+    max-width : ($container-max-width + $gr-gutter-width);
     margin : 0 auto;
     padding-left: ($gr-gutter-width / 2);
     padding-right: ($gr-gutter-width / 2);
