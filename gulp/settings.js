@@ -112,7 +112,7 @@ module.exports = {
     htaccess     : app.srcPath + '/.htaccess',
     htaccessDest : app.buildPath,
 
-    fonts        : assets.path + assets.fontsPath + '/*.+(eot|woff|woff2|ttf|svg)',
+    fonts        : assets.path + assets.fontsPath + '/**/*.+(eot|woff|woff2|ttf|svg)',
     fontsDest    : app.buildPath + '/fonts'
   },
 
