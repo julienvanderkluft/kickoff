@@ -13,7 +13,7 @@
     "del": "^2.0.2",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
-    "gulp-browserify": "^0.5.1",
+    "gulp-browser": "^3.0.4",
     "gulp-csso": "^2.0.0",
     "gulp-favicons": "^2.2.6",
     "gulp-humans": "^2.0.2",

@@ -4,8 +4,8 @@ var gulp         = require('gulp')
     notify       = require('gulp-notify')
     options      = require('minimist')(process.argv.slice(2))
     browserSync  = require('browser-sync')
+    gulpBrowser  = require('gulp-browser')
     jshint       = require('gulp-jshint')
-    browserify   = require('gulp-browserify')
     uglify       = require('gulp-uglify');
 
 var set          = require('../settings').scripts;
@@ -30,9 +30,7 @@ gulp.task('scripts', function() {
     .pipe(jshint.reporter(set.reporter))
     .pipe(jshint.reporter('fail'))
 
-    .pipe(browserify({
-      insertGlobals : true
-    }))
+    .pipe(gulpBrowser.browserify())
 
     .pipe(options.prod ? uglify() : gutil.noop())
 
