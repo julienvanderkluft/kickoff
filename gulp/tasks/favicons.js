@@ -37,7 +37,7 @@ gulp.task('favicons', function() {
       orientation: 'portrait',
       logging: false,
       online: false,
-      html: set.templates.path + '/partials/generated/favicons.html',
+      html: set.src + '/favicons/favicons.html',
       pipeHTML: false,
       replace: true
     }))

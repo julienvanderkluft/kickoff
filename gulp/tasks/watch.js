@@ -35,10 +35,6 @@ gulp.task('watch', ['build'], function() {
     gulp.start('favicons');
   });
 
-  watch(set.templates.watch, function () {
-    gulp.start('templates');
-  });
-
   watch(set.styles.watch, function () {
     gulp.start('styles');
   });
@@ -49,9 +45,5 @@ gulp.task('watch', ['build'], function() {
 
   watch(set.images.src, function () {
     gulp.start('images');
-  });
-
-  watch(set.medias.src, function () {
-    gulp.start('medias');
   });
 });

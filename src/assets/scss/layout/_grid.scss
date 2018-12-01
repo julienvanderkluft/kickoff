@@ -1,21 +1,3 @@
-//
-// TODO: Write detailled comments
-@mixin gridle_breakpoints($breakpoints-map) {
-  @each $label, $value in $breakpoints-map {
-    @if($value != null AND $value != 0) {
-      @include gridle_register_state($label, (
-        min-width : $value
-      ));
-    }
-    @else {
-      $value: map-get-next($breakpoints-map, $label);
-
-      @include gridle_register_state($label, (
-        max-width : $value
-      ));
-    }
-  }
-}
 
 // Manage main container size
 .container {
@@ -24,20 +6,3 @@
     padding-left: ($gr-gutter-width / 2);
     padding-right: ($gr-gutter-width / 2);
 }
-
-
-// Import gridle
-@import 'gridle/sass/gridle/gridle-flex';
-
-// Setup gridle
-@include gridle_setup((
-    context        : $gr-columns,
-    gutter-width   : $gr-gutter-width,
-    direction      : $gr-direction,
-));
-
-// Build breakpoints
-@include gridle_breakpoints($mq-breakpoints);
-
-// Generate classes
-@include gridle_generate_classes();

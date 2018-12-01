@@ -57,12 +57,6 @@ var app = {
   buildPath : './build',
 };
 
-var templatesPath =
-  app.srcPath + '/templates';
-
-var mediasPath =
-  '/medias';
-
 var assets = {
   path         : app.srcPath + '/assets',
   stylesPath   : '/scss',
@@ -86,6 +80,7 @@ var modulesAssets = {
 
 module.exports = {
 
+  src : app.srcPath,
   build : app.buildPath,
 
   project: {
@@ -101,8 +96,7 @@ module.exports = {
   browsersync: {
     server : app.buildPath,
     files  : [
-      app.buildPath + assets.imagesPath +  '/**',
-      app.buildPath + mediasPath +  '/**',
+      app.buildPath + assets.imagesPath +  '/**'
     ],
     open   : false,
     notify : true
@@ -114,13 +108,6 @@ module.exports = {
 
     fonts        : assets.path + assets.fontsPath + '/**/*.+(eot|woff|woff2|ttf|svg)',
     fontsDest    : app.buildPath + '/fonts'
-  },
-
-  templates: {
-    path  : templatesPath,
-    src   : templatesPath + '/*.+(html|nunjucks|nj|njk)',
-    dest  : app.buildPath,
-    watch : templatesPath + '/**/*.+(html|nunjucks|nj|njk)'
   },
 
   styles: {
@@ -142,11 +129,6 @@ module.exports = {
     dest : app.buildPath + assets.imagesPath + '/'
   },
 
-  medias: {
-    src  : app.srcPath + mediasPath + '/**',
-    dest : app.buildPath + mediasPath + '/'
-  },
-
   favicons: {
     src        : assets.path + favicons.path + '/favicon.png',
     background : favicons.background
@@ -159,11 +141,6 @@ module.exports = {
 
   sitemap: {
     changefreq: sitemap.changefreq
-  },
-
-  zip: {
-    src  : app.buildPath + '/**',
-    name : project.name + '-' + project.version
   }
 
 }

@@ -12,15 +12,7 @@ var set  = require('../settings');
 gulp.task('clean:soft', function () {
   return del([
     set.build,
-    set.templates.path + '/partials/generated',
-    set.zip.name + '.zip'
-  ]);
-});
-
-// remove zip
-gulp.task('clean:zip', function () {
-  return del([
-    set.zip.name + '.zip'
+    set.src + '/favicons'
   ]);
 });
 
@@ -28,8 +20,7 @@ gulp.task('clean:zip', function () {
 gulp.task('clean:hard', function () {
   return del([
     set.build,
-    set.templates.path + '/partials/generated',
-    set.zip.name + '.zip',
+    set.src + '/favicons',
     './node_modules'
   ]);
 });
