@@ -4,7 +4,7 @@ var gulp     = require('gulp')
     notify   = require('gulp-notify')
     options  = require('minimist')(process.argv.slice(2))
     browserSync  = require('browser-sync')
-    favicons = require('gulp-favicons');
+    favicons = require('favicons').stream;
 
 var set      = require('../settings');
 
@@ -37,8 +37,8 @@ gulp.task('favicons', function() {
       orientation: 'portrait',
       logging: false,
       online: false,
-      html: set.src + '/favicons/favicons.html',
-      pipeHTML: false,
+      html: '../' + set.src + '/favicons/favicons.html',
+      pipeHTML: true,
       replace: true
     }))
 

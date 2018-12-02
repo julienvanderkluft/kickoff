@@ -11,11 +11,11 @@
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "del": "^3.0.0",
+    "favicons": "^5.3.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-browser": "^3.0.4",
     "gulp-csso": "^3.0.0",
-    "gulp-favicons": "^2.2.6",
     "gulp-humans": "^2.0.2",
     "gulp-imagemin": "^5.0.3",
     "gulp-jshint": "^2.0.1",

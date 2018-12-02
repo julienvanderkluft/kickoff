@@ -1,8 +1,7 @@
 # App
 
 build/
-src/templates/partials/generated/
-*.zip
+src/favicons/
 
 # Created by https://www.gitignore.io/api/sass,node
 
