@@ -6,13 +6,6 @@ var set          = require('../settings');
 
 /* --
   gulp watch task
-
-  # launch server
-  - Local: http://localhost:3000
-  - External: http://192.168.1.100:3000
-
-  - Admin: http://localhost:3001
-  - Admin External: http://192.168.1.100:3001
 -- */
 
 gulp.task('watch', ['build'], function() {
@@ -23,16 +16,12 @@ gulp.task('watch', ['build'], function() {
     notify: set.browsersync.notify
   });
 
-  watch(set.copy.htaccess, function () {
-    gulp.start('htaccess');
-  });
-
   watch(set.copy.fonts, function () {
     gulp.start('fonts');
   });
 
-  watch(set.favicons.src, function () {
-    gulp.start('favicons');
+  watch(set.templates.watch, function () {
+    gulp.start('templates');
   });
 
   watch(set.styles.watch, function () {

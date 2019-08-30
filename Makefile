@@ -18,7 +18,7 @@ dev: ## Basic build project and live watching of files modifications.
 	@gulp watch
 
 prod: ## Build for production, with optimized content. And create a zipfile of it.
-	@gulp build --prod && gulp zip
+	@gulp build --prod
 	@echo "Done."
 
 clean: ## Clean build folder and temporary files.
@@ -29,4 +29,20 @@ clean: ## Clean build folder and temporary files.
 clean-hard: ## Clean build folder and installed dependencies.
 	@echo "Clean build folder and installed dependencies..."
 	@gulp clean:hard
+	@echo "Done."
+
+favicons: ## Generate favicons and partial file
+	@gulp favicons
+	@echo "Done."
+
+humans: ## Generate humans.txt note from settings informations
+	@gulp humans
+	@echo "Done."
+
+robots: ## Generate robots.txt
+	@gulp robots
+	@echo "Done."
+
+stiemap: ## Generate sitemap
+	@gulp stiemap
 	@echo "Done."

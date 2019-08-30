@@ -1,0 +1,33 @@
+var gulp         = require('gulp')
+    gutil        = require('gulp-util')
+    plumber      = require('gulp-plumber')
+    notify       = require('gulp-notify')
+    options      = require('minimist')(process.argv.slice(2))
+    browserSync  = require('browser-sync')
+    twig         = require('gulp-twig');
+
+var set          = require('../settings').templates;
+
+/* --
+  build html output pages
+-- */
+
+gulp.task('templates', function() {
+  return gulp.src(set.src)
+    .pipe(!options.prod ? plumber({
+      errorHandler:
+        notify.onError({
+        title: 'Kickoff',
+        subtitle: 'Error:',
+        message: '<%= error.message %>',
+        sound: false
+      })
+    }) : gutil.noop())
+
+    .pipe(twig({
+      base: [set.path]
+    }))
+
+    .pipe(gulp.dest(set.dest))
+    .pipe(browserSync.reload({stream: true, once: true}))
+});

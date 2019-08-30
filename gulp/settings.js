@@ -1,10 +1,44 @@
 /* --
   Gulp tasks settings
 
-  # Project informations
-  # Robots, sitemap and favicons configuration
   # Paths variables
+  # Robots, sitemap and favicons configuration
+  # Project informations
 -- */
+
+var appPath = './';
+
+var assetsSrc = {
+  templatesPath : 'templates',
+  stylesPath    : 'styles/scss',
+  scriptsPath   : 'scripts/src',
+  imagesPath    : 'images/src',
+  fontsPath     : 'fonts',
+}
+
+var assetsDest = {
+  templatesPath : '',
+  stylesPath    : 'styles/css',
+  mapsPath      : 'styles/maps',
+  scriptsPath   : 'scripts/bundle',
+  imagesPath    : 'images/public',
+  fontsPath     : 'fonts',
+  faviconsPath  : 'favicons',
+}
+
+var robots = {
+  useragent : '*',
+  disallow  : ''
+};
+
+var sitemap = {
+  changefreq : 'monthly',
+};
+
+var favicons = {
+  path       : '/favicons',
+  background : '#fff'
+}
 
 var project = {
   url     : 'http://localhost',
@@ -21,8 +55,7 @@ var project = {
   site    : [
     'Last update : ' + new Date(),
     'Standards: HTML5, CSS3',
-    'Components: Kickoff, Gulp',
-    'Software: Sublime Text 3'
+    'Components: Kickoff'
   ],
   note    : [
     'Built with Kickoff by Julien van der Kluft.',
@@ -38,40 +71,6 @@ var project = {
   ]
 };
 
-var robots = {
-  useragent: '*',
-  disallow: ''
-};
-
-var sitemap = {
-  changefreq: 'monthly',
-};
-
-var favicons = {
-  path : '/favicons',
-  background : '#fff'
-}
-
-var app = {
-  srcPath   : './src',
-  buildPath : './build',
-};
-
-var assets = {
-  path         : app.srcPath + '/assets',
-  stylesPath   : '/scss',
-  scriptsPath  : '/js',
-  imagesPath   : '/images',
-  fontsPath    : '/fonts',
-};
-
-var modulesAssets = {
-  styles :
-    [
-      './node_modules/',
-    ],
-}
-
 
 /*
   Modify part after this line,
@@ -80,8 +79,8 @@ var modulesAssets = {
 
 module.exports = {
 
-  src : app.srcPath,
-  build : app.buildPath,
+  src : appPath,
+  build : appPath,
 
   project: {
     distURL : project.url,
@@ -94,53 +93,71 @@ module.exports = {
   },
 
   browsersync: {
-    server : app.buildPath,
+    server : appPath,
     files  : [
-      app.buildPath + assets.imagesPath +  '/**'
+      assetsSrc.imagesPath +  '/**'
     ],
     open   : false,
     notify : true
   },
 
   copy: {
-    htaccess     : app.srcPath + '/.htaccess',
-    htaccessDest : app.buildPath,
+    htaccess     : appPath + '/.htaccess',
+    htaccessDest : appPath,
 
-    fonts        : assets.path + assets.fontsPath + '/**/*.+(eot|woff|woff2|ttf|svg)',
-    fontsDest    : app.buildPath + '/fonts'
+    fonts        : assetsSrc.fontsPath + '/**/*.+(eot|woff|woff2|ttf|svg)',
+    fontsDest    : assetsDest.fontsPath
+  },
+
+  templates: {
+    src   : appPath + assetsSrc.templatesPath + '/*.+(html|twig)',
+    path  : appPath + assetsSrc.templatesPath,
+    dest  : appPath + assetsDest.templatesPath,
+    watch : appPath + assetsSrc.templatesPath + '/**/*.+(html|twig)'
   },
 
   styles: {
-    src   : assets.path + assets.stylesPath + '/main.scss',
-    includePaths : modulesAssets.styles,
-    dest  : app.buildPath + '/css/',
-    watch : assets.path + assets.stylesPath + '/**'
+    src          : appPath + assetsSrc.stylesPath + '/main.scss',
+    includePaths : ['./node_modules/'],
+    dest         : appPath + assetsDest.stylesPath,
+    watch        : appPath + assetsSrc.stylesPath + '/**'
   },
 
   scripts: {
-    src      : assets.path + assets.scriptsPath + '/main.js',
-    dest     : app.buildPath + assets.scriptsPath + '/',
-    watch    : assets.path + assets.scriptsPath + '/**',
+    src      : assetsSrc.scriptsPath + '/main.js',
+    dest     : assetsDest.scriptsPath,
+    watch    : assetsSrc.scriptsPath + '/**',
     reporter : 'jshint-stylish'
   },
 
   images: {
-    src  : assets.path + assets.imagesPath + '/**',
-    dest : app.buildPath + assets.imagesPath + '/'
+    src  : assetsSrc.imagesPath + '/**',
+    dest : assetsDest.imagesPath
   },
 
-  favicons: {
-    src        : assets.path + favicons.path + '/favicon.png',
-    background : favicons.background
-  },
+  // favicons: {
+  //   src        : favicons.path + '/favicon.png',
+  //   background : favicons.background,
+  //   dest       : assetsDest.faviconsPath
+  // },
 
   robots: {
-    useragent: robots.useragent,
-    disallow: robots.disallow
+    useragent : robots.useragent,
+    disallow  : robots.disallow
   },
 
   sitemap: {
     changefreq: sitemap.changefreq
+  },
+
+  clean: {
+    templates   : appPath + assetsDest.templatesPath + '/*.html',
+    styles      : appPath + assetsDest.stylesPath,
+    maps        : appPath + assetsDest.mapsPath,
+    scripts     : appPath + assetsDest.scriptsPath,
+    images      : appPath + assetsDest.imagesPath,
+    fonts       : appPath + assetsDest.fontsPath,
+    // favicons : appPath + assetsDest.faviconsPath,
   }
 
 }

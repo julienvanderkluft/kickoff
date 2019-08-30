@@ -1,7 +1,7 @@
 var gulp = require('gulp')
     del  = require('del');
 
-var set  = require('../settings');
+var set  = require('../settings').clean;
 
 /* --
   gulp clean tasks
@@ -11,16 +11,26 @@ var set  = require('../settings');
 // remove prod output folder
 gulp.task('clean:soft', function () {
   return del([
-    set.build,
-    set.src + '/favicons'
+    set.templates,
+    set.styles,
+    set.maps,
+    set.scripts,
+    set.images,
+    set.fonts,
+    // set.favicons
   ]);
 });
 
 // remove prod output folder and installed node modules
 gulp.task('clean:hard', function () {
   return del([
-    set.build,
-    set.src + '/favicons',
-    './node_modules'
+    './node_modules',
+    set.templates,
+    set.styles,
+    set.maps,
+    set.scripts,
+    set.images,
+    set.fonts,
+    // set.favicons
   ]);
 });
