@@ -1,7 +1,41 @@
 // --
-// Headings
+// Common page styles
 // --
 
+
+// `<html/>` and `<body/>`
+// --
+html, body {
+  height: 100%;
+}
+
+html {
+  font-size: $fs-root;
+}
+
+  body {
+    font-family: $ff-primary;
+    font-weight: $fw-primary-regular;
+    font-size: em($fs-base);
+    line-height: $lh;
+    color: $txt-clr;
+    background: $body-bkg;
+  }
+
+
+// Text selection colors
+// --
+::selection {
+  background: darken($clr-secondary, 20%);
+  text-shadow: none;
+}
+
+
+// Common text elements
+// --
+
+//
+// Headings
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: rem($headings-mb);
@@ -28,3 +62,25 @@ h6 { font-size: rem($fs-h6); }
 .h4 { font-size: rem($fs-h4); }
 .h5 { font-size: rem($fs-h5); }
 .h6 { font-size: rem($fs-h6); }
+
+
+//
+// Links
+a {
+  color: $link-clr;
+  text-decoration: $link-decoration;
+  transition: color $transition-duration $transition-easing;
+
+  #{$link-hover} {
+    color: $link-hover-clr;
+    text-decoration: $link-hover-decoration;
+  }
+}
+
+
+//
+// Define default margins on paragraphs
+p,
+ul, ol {
+  margin-bottom: rem($space-base);
+}

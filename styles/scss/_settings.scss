@@ -39,22 +39,6 @@ $gr-gutter-width     : 30px;
 // =Spacing
 // --
 
-$space-inset-base : 16px 16px 16px 16px;
-$space-inset-xs   : 4px 4px 4px 4px;
-$space-inset-s    : 8px 8px 8px 8px;
-$space-inset-m    : 16px 16px 16px 16px;
-$space-inset-l    : 32px 32px 32px 32px;
-$space-inset-xl   : 64px 64px 64px 64px;
-$space-inset      : $space-inset-base;
-
-$space-stack-base : 0 0 16px 0;
-$space-stack-xs   : 0 0 4px 0;
-$space-stack-s    : 0 0 8px 0;
-$space-stack-m    : 0 0 16px 0;
-$space-stack-l    : 0 0 32px 0;
-$space-stack-xl   : 0 0 64px 0;
-$space-stack      : $space-stack-base;
-
 $space-base       : 16px;
 $space-xs         : 4px;
 $space-s          : 8px;
@@ -89,6 +73,10 @@ $link-hover-decoration : underline;
 // --
 $ff-primary : "Helvetica Neue", Helvetica, Arial, sans-serif;
 
+// Font weights
+// --
+$fw-primary-regular   : normal;
+
 // Font sizes
 // --
 
@@ -104,11 +92,6 @@ $fs-h3   : 18px;
 $fs-h4   : 16px;
 $fs-h5   : 13px;
 $fs-h6   : 10px;
-
-// Font weights
-// --
-$fw-primary-regular: normal;
-
 
 // Line-height
 // --

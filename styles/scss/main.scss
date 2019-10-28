@@ -7,16 +7,13 @@
 
 @import "settings";
 
-// --
-// =Init
-// --
-
-@import "init";
-
 
 // --
-// =Utils
+// =Tools & utils
 // --
+
+@import "tools/mediaqueries";
+@import "tools/units";
 
 @import "utils/center";
 @import "utils/clearfix";
@@ -24,13 +21,35 @@
 @import "utils/shapes";
 @import "utils/transition";
 
+
 // --
-// =Tools
+// =Base
 // --
 
-@import "tools/map-get-next";
-@import "tools/mediaqueries";
-@import "tools/units";
+@import "base/init";
+@import "base/page";
+
+
+// --
+// =Layout
+// --
+
+@import "layout/containers";
+
+
+// --
+// =Objects
+// --
+
+// @import "objects/";
+
+
+
+// --
+// =Components
+// --
+
+// @import "components/";
 
 
 // --
@@ -40,30 +59,6 @@
 @import "helpers/alignments";
 @import "helpers/animations";
 @import "helpers/visibility";
-
-
-// --
-// =Layout
-// --
-
-@import "layout/global";
-@import "layout/grid";
-
-
-// --
-// =Type
-// --
-
-@import "type/content";
-@import "type/headings";
-@import "type/links";
-
-
-// --
-// =Components
-// --
-
-// @import "components/";
 
 
 // --

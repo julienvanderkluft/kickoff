@@ -23,7 +23,7 @@ var assetsDest = {
   scriptsPath   : 'scripts/bundle',
   imagesPath    : 'images/public',
   fontsPath     : 'fonts',
-  faviconsPath  : 'favicons',
+  // faviconsPath  : 'favicons',
 }
 
 var robots = {
