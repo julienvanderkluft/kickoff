@@ -3,7 +3,7 @@ images/public
 scripts/bundle
 styles/css
 styles/maps
-./*.html
+/*.html
 
 # Created by https://www.gitignore.io/api/sass,node
 
