@@ -1,0 +1,17 @@
+.l-row {
+  @include row;
+}
+
+[class*="l-col-"] {
+  padding-left: rem($gr-gutter-width); padding-right: rem($gr-gutter-width);
+
+  @include mq($from: $breackpoint-swap) {
+    padding-left: rem($gr-gutter-width / 2); padding-right: rem($gr-gutter-width / 2);
+  }
+}
+
+@include grid(xs, $gr-columns);
+@include respond-from(sm) { @include grid(sm, $gr-columns); }
+@include respond-from(md) { @include grid(md, $gr-columns); }
+@include respond-from(lg) { @include grid(lg, $gr-columns); }
+@include respond-from(xl) { @include grid(xl, $gr-columns); }

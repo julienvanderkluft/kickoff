@@ -1,0 +1,57 @@
+$button-padding-y                : $input-button-padding-y;
+$button-padding-x                : $input-button-padding-x;
+$button-ff                       : $input-button-ff;
+$button-fw                       : $input-button-fw;
+$button-fs-base                  : $input-button-fs-base;
+$button-lh-base                  : $input-button-lh-base;
+$button-border-w                 : $input-button-border-w;
+$button-border-radius            : $input-button-border-radius;
+
+$button-primary-clr              : $clr-secondary;
+$button-primary-bg               : $clr-primary;
+$button-primary-border-clr       : $button-primary-bg;
+$button-primary-hover-clr        : $button-primary-clr;
+$button-primary-hover-bg         : rgba($button-primary-bg, .8);
+$button-primary-hover-border-clr : $button-primary-border-clr;
+
+.o-button {
+  display: inline-block;
+  padding-top: rem($button-padding-y); padding-bottom: rem($button-padding-y);
+  padding-left: rem($button-padding-x); padding-right: rem($button-padding-x);
+  vertical-align: middle;
+  text-align: center;
+  font-family: $button-ff;
+  font-weight: $button-fw;
+  font-size: rem($button-fs-base);
+  line-height: $button-lh-base;
+  text-decoration: none;
+  border: rem($button-border-w) solid transparent;
+  border-radius: rem($button-border-radius);
+  cursor: pointer;
+  user-select: none;
+  @include transition();
+
+  #{$link-hover} {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.o-button--primary {
+  color: $button-primary-clr;
+  background-color: $button-primary-bg;
+  border-color: $button-primary-border-clr;
+
+  #{$link-hover} {
+    color: $button-primary-hover-clr;
+    background-color: $button-primary-hover-bg;
+    border-color: $button-primary-hover-border-clr;
+  }
+}
+
+.o-button--block {
+  width: 100%;
+}

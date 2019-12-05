@@ -1,0 +1,7 @@
+@mixin respond-from($mq) {
+  @include mq($from: $mq) { @content; }
+}
+
+@mixin respond-until($mq) {
+  @include mq($until: $mq) { @content; }
+}

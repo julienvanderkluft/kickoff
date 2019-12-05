@@ -24,6 +24,10 @@ $mq-breakpoints: (
 // `true` or `false` are accepted
 $show-breakpoints: true;
 
+//
+// Default swaping breakpoint mobile/desktop
+$breackpoint-swap : "lg";
+
 
 // --
 // =Grid
@@ -104,6 +108,28 @@ $headings-ff  : inherit;
 $headings-fw  : 700;
 $headings-lh  : 1.1;
 $headings-clr : inherit;
+
+
+// =Input
+// =Buttons
+// --
+$input-button-padding-y              : $space-m;
+$input-button-padding-x              : $space-xl;
+$input-button-ff                     : $ff-primary;
+$input-button-fw                     : $fw-primary-regular;
+$input-button-fs-base                : 1rem;
+$input-button-lh-base                : 1.1;
+$input-button-border-w               : 0;
+$input-button-border-radius          : 0;
+
+
+// --
+// =Z-index
+// --
+
+$z-modal   : 1100;
+$z-overlay : 1000;
+$z-navbar  : 500;
 
 
 // --

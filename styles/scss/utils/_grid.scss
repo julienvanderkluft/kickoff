@@ -1,0 +1,28 @@
+@mixin grid($size, $grid-columns) {
+  @for $i from 1 through $grid-columns {
+    .col-#{$size}-#{$i}-#{$grid-columns} {
+      @include cols($i, $grid-columns);
+    }
+  }
+}
+
+@mixin row {
+  margin-left: rem(-$gr-gutter-width); margin-right: rem(-$gr-gutter-width);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include mq($from: $breackpoint-swap) {
+    margin-left: rem(-$gr-gutter-width / 2); margin-right: rem(-$gr-gutter-width / 2);
+  }
+}
+
+@mixin cols($cols, $sum: $gr-columns, $gutter: $gr-gutter-width) {
+  padding-left: rem($gutter); padding-right: rem($gutter);
+  flex: 0 0 percentage($cols / $sum);
+  max-width: percentage($cols / $sum);
+
+  @include mq($from: $breackpoint-swap) {
+    padding-left: rem($gutter / 2); padding-right: rem($gutter / 2);
+  }
+}
