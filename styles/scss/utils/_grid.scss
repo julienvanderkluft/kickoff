@@ -1,6 +1,6 @@
 @mixin grid($size, $grid-columns) {
   @for $i from 1 through $grid-columns {
-    .col-#{$size}-#{$i}-#{$grid-columns} {
+    .l-col-#{$size}-#{$i}-#{$grid-columns} {
       @include cols($i, $grid-columns);
     }
   }
