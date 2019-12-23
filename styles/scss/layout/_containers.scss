@@ -1,8 +1,6 @@
-
 // Manage main container size
 .l-container {
-    max-width : ($container-max-width + $gr-gutter-width);
-    margin : 0 auto;
-    padding-left: ($gr-gutter-width / 2);
-    padding-right: ($gr-gutter-width / 2);
+  max-width : ($container-max-width + $gr-gutter-width);
+  margin : 0 auto;
+  padding-left: ($gr-gutter-width / 2); padding-right: ($gr-gutter-width / 2);
 }
