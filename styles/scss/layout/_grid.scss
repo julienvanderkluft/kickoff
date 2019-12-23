@@ -6,6 +6,8 @@
   padding-left: rem($gr-gutter-width); padding-right: rem($gr-gutter-width);
 
   @include mq($from: $breackpoint-swap) {
+    flex: 0 0 100%;
+    width: 100%;
     padding-left: rem($gr-gutter-width / 2); padding-right: rem($gr-gutter-width / 2);
   }
 }
