@@ -8,9 +8,8 @@ $mq-show-breakpoints: (map-keys($mq-breakpoints));
 
 // Update label display of breakpoint
 body::before {
-  right: auto !important; left: 0 !important;
-  border-left: 0 !important;
-  border-right: 1px solid #fbeed5 !important;
+  top: auto !important; bottom: 0 !important;
+  border: 0 !important;
 
   // Hide the currently active breakpoint if `$show-breakpoints` is `false
   @if($show-breakpoints == false) {
