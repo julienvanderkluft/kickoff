@@ -16,6 +16,7 @@
 @import "tools/units";
 
 @import "utils/center";
+
 @import "utils/clearfix";
 @import "utils/grid";
 @import "utils/links-states";
@@ -70,3 +71,7 @@
 // --
 
 @import "print";
+
+body {
+  background-color: blue;
+}

@@ -2,13 +2,13 @@
   Gulp tasks settings
 
   # Paths variables
-  # Robots, sitemap and favicons configuration
-  # Project informations
 -- */
 
-var appPath = './';
+const projectName = 'Kickoff'
 
-var assetsSrc = {
+const appPath = './'
+
+const assetsSrc = {
   templatesPath : 'templates',
   stylesPath    : 'styles/scss',
   scriptsPath   : 'scripts/src',
@@ -16,65 +16,24 @@ var assetsSrc = {
   fontsPath     : 'fonts',
 }
 
-var assetsDest = {
+const assetsDest = {
   templatesPath : '',
   stylesPath    : 'styles/css',
-  mapsPath      : 'styles/maps',
   scriptsPath   : 'scripts/bundle',
   imagesPath    : 'images/public',
   fontsPath     : 'fonts',
   // faviconsPath  : 'favicons',
 }
 
-var robots = {
-  useragent : '*',
-  disallow  : ''
-};
-
-var sitemap = {
-  changefreq : 'monthly',
-};
-
-var favicons = {
-  path       : '/favicons',
-  background : '#fff'
-}
-
-var project = {
-  url     : 'http://localhost',
-  name    : 'Kickoff',
-  version : '0.0.1',
-  desc    : 'Launch the game faster !',
-  team    : [
-    'Dev. HTML/CSS : Julien van der Kluft (@jvanderkluft on Twitter), http://www.minuitsept.com',
-    // Add you and your teammates here !
-  ],
-  thanks  : [
-    'Kickoff (https://github.com/julienvanderkluft/kickoff)'
-  ],
-  site    : [
-    'Last update : ' + new Date(),
-    'Standards: HTML5, CSS3',
-    'Components: Kickoff'
-  ],
-  note    : [
-    'Built with Kickoff by Julien van der Kluft.',
-    '   _     _',
-    '  (c).-.(c)',
-    '   / ._. \\',
-    ' __\\( Y )/__',
-    '(_.-/\'-\'\\-._)',
-    '   || O ||',
-    ' _.\' `-\' \'._',
-    '(.-./`-\'\\.-.)',
-    ' `-\'     `-\''
-  ]
-};
+// const favicons = {
+//   path       : '/favicons',
+//   background : '#fff'
+// }
 
 
 /*
   Modify part after this line,
-  only if you know what you do
+  only if you know what you are doing
 */
 
 module.exports = {
@@ -82,31 +41,17 @@ module.exports = {
   src : appPath,
   build : appPath,
 
-  project: {
-    distURL : project.url,
-    name    : project.name,
-    version : project.version,
-    team    : project.team,
-    thanks  : project.thanks,
-    site    : project.site,
-    note    : project.note
-  },
-
   browsersync: {
     server : appPath,
-    files  : [
-      assetsSrc.imagesPath +  '/**'
-    ],
+    files  : [],
     open   : false,
     notify : true
   },
 
-  copy: {
-    htaccess     : appPath + '/.htaccess',
-    htaccessDest : appPath,
-
-    fonts        : assetsSrc.fontsPath + '/**/*.+(eot|woff|woff2|ttf|svg)',
-    fontsDest    : assetsDest.fontsPath
+  fonts: {
+    src   : assetsSrc.fontsPath + '/**/*.+(eot|woff|woff2|ttf|svg)',
+    dest  : assetsDest.fontsPath,
+    watch : assetsSrc.fontsPath + '/**'
   },
 
   templates: {
@@ -126,13 +71,13 @@ module.exports = {
   scripts: {
     src      : assetsSrc.scriptsPath + '/main.js',
     dest     : assetsDest.scriptsPath,
-    watch    : assetsSrc.scriptsPath + '/**',
-    reporter : 'jshint-stylish'
+    watch    : assetsSrc.scriptsPath + '/**'
   },
 
   images: {
-    src  : assetsSrc.imagesPath + '/**',
-    dest : assetsDest.imagesPath
+    src   : assetsSrc.imagesPath + '/**',
+    dest  : assetsDest.imagesPath,
+    watch : assetsSrc.imagesPath +  '/**'
   },
 
   // favicons: {
@@ -141,19 +86,9 @@ module.exports = {
   //   dest       : assetsDest.faviconsPath
   // },
 
-  robots: {
-    useragent : robots.useragent,
-    disallow  : robots.disallow
-  },
-
-  sitemap: {
-    changefreq: sitemap.changefreq
-  },
-
   clean: {
     templates   : appPath + assetsDest.templatesPath + '/*.html',
     styles      : appPath + assetsDest.stylesPath,
-    maps        : appPath + assetsDest.mapsPath,
     scripts     : appPath + assetsDest.scriptsPath,
     images      : appPath + assetsDest.imagesPath,
     fonts       : appPath + assetsDest.fontsPath,
